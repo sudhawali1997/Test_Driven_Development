@@ -31,5 +31,11 @@ class TestDrivenDevelopmentApplicationTests {
 		StringCalculator calculator=new StringCalculator();
 		assertEquals(7,calculator.add("1,2,4"));
 	}
+	
+	@Test
+	public void testAddWithNewLineDelimiter() {
+		StringCalculator calculator=new StringCalculator();
+		assertEquals(6, calculator.add("1\n2,3"));
+	}
 
 }
