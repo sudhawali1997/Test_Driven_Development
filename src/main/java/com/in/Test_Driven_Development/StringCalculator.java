@@ -18,12 +18,20 @@ public class StringCalculator {
 	    }
 		String[] numArray=numbers.split(delimeter);
 		int sum=0;
+		List<Integer> negatives = new ArrayList<>();
 		
 		for (String num : numArray) {
+			int number = Integer.parseInt(num);
+			if(number<0)
+				negatives.add(number);
             sum += Integer.parseInt(num);
 	       
 	    }
+		if (!negatives.isEmpty()) {
+	        throw new IllegalArgumentException("negative numbers not allowed: " + negatives.toString().replaceAll("[\\[\\]]", ""));
+	    }
 	    return sum;
+	
 	}
 		
 	}
