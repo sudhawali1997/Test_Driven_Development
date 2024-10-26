@@ -25,5 +25,11 @@ class TestDrivenDevelopmentApplicationTests {
 		StringCalculator calculator=new StringCalculator();
 		assertEquals(4,calculator.add("2,2"));
 	}
+	
+	@Test
+	public void testAddMultipleNumbres() {
+		StringCalculator calculator=new StringCalculator();
+		assertEquals(7,calculator.add("1,2,4"));
+	}
 
 }
