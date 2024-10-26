@@ -19,5 +19,11 @@ class TestDrivenDevelopmentApplicationTests {
 	    StringCalculator calculator = new StringCalculator();
 	    assertEquals(1, calculator.add("1"));
 	}
+	
+	@Test
+	public void testAddTwoNumbers() {
+		StringCalculator calculator=new StringCalculator();
+		assertEquals(4,calculator.add("2,2"));
+	}
 
 }
